@@ -34,6 +34,16 @@
         <div class="signup"><a href="https://smeisty.app/signup"><button>Create your Web3 profile</button></a></div>
         <div class="profile"><img src="assets/dino-profile.png" alt="Dino profile image"></div>
 
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LV4DQF9SW"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-0LV4DQF9SW');
+        </script>
     </div>
 </body>
 
@@ -45,11 +55,18 @@
         box.style.visibility="hidden";
     }
 };
-document.ontouchstart = function(evt) {
-  if (document.getElementById("messageBox") != null) {
-    document.getElementById("messageBox").style.visibility="hidden";
-  }
+    // Remove text on mobile
+    document.ontouchstart = function(evt) {
+    if (document.getElementById("messageBox") != null) {
+        document.getElementById("messageBox").style.visibility="hidden";
+    }
 };
+    // Prevent spacebar press from moving to bottom of page
+    window.addEventListener('keydown', (e) => {  
+    if (e.keyCode === 32 && e.target === document.body) {  
+        e.preventDefault();  
+    }  
+});
 </script>
     
 </html>
