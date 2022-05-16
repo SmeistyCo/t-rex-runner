@@ -43,6 +43,11 @@
         box.style.visibility="hidden";
     }
 };
+document.ontouchstart = function(evt) {
+  if (document.getElementById("messageBox") != null) {
+    document.getElementById("messageBox").style.visibility="hidden";
+  }
+};
 </script>
     
 </html>
