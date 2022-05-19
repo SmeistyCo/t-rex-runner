@@ -156,6 +156,7 @@ h3 {
 .signup {
   text-align: center;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .signup a { 
@@ -169,6 +170,8 @@ h3 {
 .signup button {
   border: none;
   background: #FFFFF6;
+  font-size: 0.8rem;
+  color: #0b8fac;
 }
 
 .arrow
